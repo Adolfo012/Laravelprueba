@@ -38,7 +38,7 @@
             <option value="Alumno">Alumno</option>
             <option value="Empleado">Empleado</option>
         </select> -->
-        <input type="submit" name="enviarp">
+        <input type="submit" name="enviar">
     </form>
 </body>
 </html>
