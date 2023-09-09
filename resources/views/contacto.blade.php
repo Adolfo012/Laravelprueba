@@ -16,7 +16,7 @@
         @csrf
         <label for="correo">Correo:</label><br>
         <!-- <input type="email" name="correo" value="@alumnos.udg.mx"><br> -->
-        <input type="email" name="correo"
+        <input type="email" name="correo" 
         placeholder="example@gmail.com"
         @if ($tipo == "alumno")
 
@@ -38,7 +38,7 @@
             <option value="Alumno">Alumno</option>
             <option value="Empleado">Empleado</option>
         </select> -->
-        <input type="submit" name="enviar">
+        <input type="submit" name="enviarp">
     </form>
 </body>
 </html>
