@@ -13,22 +13,38 @@
         <!-- <?php echo $tipo; ?> -->
         <h3>{{ $tipo }} </h3>
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         @csrf
         <label for="correo">Correo:</label><br>
         <!-- <input type="email" name="correo" value="@alumnos.udg.mx"><br> -->
-        <input type="email" name="correo" 
+        <!-- <input type="email" name="correo" 
         placeholder="example@gmail.com"
         @if ($tipo == "alumno")
 
             value="@alumnos.udg.mx"
 
-        @else ($tipo == "empleado")
-
+        @endif
+        @if ($tipo == "empleado")
+        
             value="@empleado.udg.mx"
 
-        @endif 
-        ><br>
-        <label for="comentario">Comentario:</label><br>
+        @else ($tipo == "empleado")
+
+            value="@"
+
+        @endif
+        ><br> -->
+        <input type="email" name="correo" 
+        placeholder="example@gmail.com"> <br>
+        <label for="comentario">Comentario:</label> <br>
         <textarea name="comentario" id="comentario" cols="30" rows="10">
 
         </textarea>
